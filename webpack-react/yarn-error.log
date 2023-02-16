@@ -1,0 +1,35 @@
+Arguments: 
+  /Users/jmb20210029/.nodebrew/node/v14.17.1/bin/node /Users/jmb20210029/.nodebrew/current/bin/yarn add --dev @babel/core babel-loader @babel/cli @babel/preset-env @babel/preset-react
+
+PATH: 
+  /opt/homebrew/opt/python3/libexec/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/sbin:/usr/local/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/opt/python3/libexec/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/sbin:/Users/jmb20210029/.cargo/bin:/opt/homebrew/bin:/opt/homebrew/bin
+
+Yarn version: 
+  1.22.18
+
+Node version: 
+  14.17.1
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  Error: self signed certificate in certificate chain
+      at TLSSocket.onConnectSecure (_tls_wrap.js:1514:34)
+      at TLSSocket.emit (events.js:375:28)
+      at TLSSocket._finishInit (_tls_wrap.js:936:8)
+      at TLSWrap.ssl.onhandshakedone (_tls_wrap.js:708:12)
+
+npm manifest: 
+  {
+    "name": "webpack-react",
+    "version": "1.0.0",
+    "main": "index.js",
+    "license": "MIT"
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile
