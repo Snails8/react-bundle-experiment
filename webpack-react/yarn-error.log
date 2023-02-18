@@ -1,5 +1,5 @@
 Arguments: 
-  /Users/jmb20210029/.nodebrew/node/v14.17.1/bin/node /Users/jmb20210029/.nodebrew/current/bin/yarn add typescript
+  /Users/jmb20210029/.nodebrew/node/v14.17.1/bin/node /Users/jmb20210029/.nodebrew/current/bin/yarn add -D @types/react @types/react-dom @types/node
 
 PATH: 
   /opt/homebrew/opt/python3/libexec/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/sbin:/usr/local/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:/opt/homebrew/opt/python3/libexec/bin:/Users/jmb20210029/.nodebrew/current/bin:/usr/local/sbin:/Users/jmb20210029/.cargo/bin:/opt/homebrew/bin:/opt/homebrew/bin
@@ -26,6 +26,11 @@ npm manifest:
     "version": "1.0.0",
     "main": "index.js",
     "license": "MIT",
+    "scripts": {
+      "start": "webpack-dev-server .",
+      "build": "webpack .",
+      "build-prod": "webpack --mode=production"
+    },
     "devDependencies": {
       "@babel/cli": "^7.20.7",
       "@babel/core": "^7.20.12",
@@ -39,7 +44,8 @@ npm manifest:
     },
     "dependencies": {
       "react": "^18.2.0",
-      "react-dom": "^18.2.0"
+      "react-dom": "^18.2.0",
+      "typescript": "^4.9.5"
     }
   }
 
@@ -3374,6 +3380,11 @@ Lockfile:
     dependencies:
       media-typer "0.3.0"
       mime-types "~2.1.24"
+  
+  typescript@^4.9.5:
+    version "4.9.5"
+    resolved "https://registry.yarnpkg.com/typescript/-/typescript-4.9.5.tgz#095979f9bcc0d09da324d58d03ce8f8374cbe65a"
+    integrity sha512-1FXk9E2Hm+QzZQ7z+McJiHL4NW1F2EzMu9Nq9i3zAaGqibafqYwCVU6WyWAuyQRRzOlxou8xZSyXLEN8oKj24g==
   
   unicode-canonical-property-names-ecmascript@^2.0.0:
     version "2.0.0"
