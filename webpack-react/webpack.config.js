@@ -8,22 +8,31 @@ module.exports = {
     path: path.resolve(__dirname, './dist'),
     filename: 'bundle.js',
   },
-  // target: 'web',
   resolve: {
     extensions: ['.ts', '.tsx', '.js', '.json'],
   },
   module: {
     rules: [
       {
-        test: /\.(js|jsx)$/,
+        test: /\.(js|jsx|ts|tsx)$/,
         exclude: /node_modules/,
-        use: 'babel-loader',
+        use: [
+          {
+            loader: 'babel-loader',
+          },
+          {
+            loader: 'ts-loader',
+          }
+        ],
+      },
+      {
+        test: /\.(scss|css)$/,
+        use: ["style-loader", "css-loader", "sass-loader"],
       },
     ],
   },
   devServer: {
     port: '3000',
-    contentBase: "./dist",
     static: {
       directory: path.join(__dirname, 'public'),
     },
@@ -33,7 +42,9 @@ module.exports = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      template: path.join(__dirname, 'public', 'index.html'),
+      template: path.join(__dirname, './public/index.html'),
     }),
   ],
+  // ES5(IE11等)向けの指定（webpack 5以上で必要）
+  target: ["web", "es5"],
 };
